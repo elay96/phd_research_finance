@@ -37,7 +37,8 @@ data/
 
 1. [Decision memo](docs/00_decision_memo.md) — comparison of the three designs.
 2. [NBER findings](docs/nber_db1a_findings.md) — processing results and data-quality caveats.
-3. [Airline replication brief](docs/tracks/01_airline_replication.md) · [later aviation brief](docs/tracks/02_airline_extension.md) · [space brief](docs/tracks/03_space_extension.md).
+3. [Key paper: Bosch, Eckard & Singal (1998)](literature/README.md) — original air-crash event-study design and PCTLAP definition.
+4. [Airline replication brief](docs/tracks/01_airline_replication.md) · [later aviation brief](docs/tracks/02_airline_extension.md) · [space brief](docs/tracks/03_space_extension.md).
 
 ## Missing Research Inputs
 

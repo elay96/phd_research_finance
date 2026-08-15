@@ -13,3 +13,6 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ipynb_checkpoints/
+
+# Large local source archive (2.7 GB); retained on disk, excluded from Git
+/data/airline/raw/nboeALL/

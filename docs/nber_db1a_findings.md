@@ -37,3 +37,5 @@ The passenger-weighted fare field has a sharp peak of 445.14 in 1995Q4, versus 1
 ## What It Can and Cannot Establish
 
 The data are suitable for constructing candidate route/itinerary exposure measures. They do **not** contain the original paper's PCTLAP as a ready-made field. Reconstructing PCTLAP still requires the paper's exact definition, a carrier/route concordance, treatment of mergers and codeshares, and validation against the original authors' result.
+
+To extend the archive for later events, download the missing DB1B quarters manually from **2016Q4 onward** and place them in `data/airline/raw/nboeALL/`. The raw directory is deliberately excluded from Git.
