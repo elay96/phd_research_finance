@@ -1,51 +1,28 @@
-# PhD Research — Financial Effects of Launch Failures
+# 🚀 Launch Failure Finance Research
 
-מאגר עבודה למחקר אירועים על השפעת כישלונות שיגור בחלל על שווקים פיננסיים. המאגר מתחיל בנתוני האירועים של ESA DISCOS, ובהמשך יצורפו תשואות, implied volatility, שיוך חברות, מידע על חוזים, כיסוי תקשורתי ומשתני בקרה.
+An event-study research dataset on the financial effects of orbital launch failures.
 
-## מצב נוכחי
+`ESA DISCOS v2` `119 Failure Events` `2000–2026`
 
-- 119 שיגורים המסומנים ככושלים מאז 2000
-- טווח התאריכים: 2000-02-10 עד 2026-04-03, מהחדש לישן
-- מקור ראשי: ESA DISCOS v2
-- בדיקת הגישה הוחזרה בהצלחה (`HTTP 200` בשני עמודים)
+## 📊 Current Dataset
 
-## מבנה המאגר
-
-```
-data/
-  raw/esa_discos/       תשובות מקוריות מה־API, ללא שינוי
-  processed/            טבלאות מוכנות למחקר
-docs/                   מילון נתונים והחלטות מתודולוגיות
-scripts/                קוד איסוף, ניקוי וניתוח שיתווסף בהמשך
-```
-
-## הנתונים הקיימים
-
-| קובץ | תיאור |
+| File | Description |
 | --- | --- |
-| `data/processed/esa_discos_failed_launches_since_2000.csv` | טבלת האירועים הראשונית, 119 שורות; שמות ואת מזהים של vehicle, site ו־entities כשזמינים |
-| `data/raw/esa_discos/esa_discos_failed_launches_since_2000_raw.json` | JSON מסונן לרשימת השיגורים מאז 2000, כולל `data` ו־`included` |
-| `data/raw/esa_discos/esa_discos_failed_launches_api_pages_raw.json` | תגובות ה־API המקוריות המלאות, לרבות מטא־דאטה, קישורי עימוד ורשומות ישנות מ־2000 שנכללו בעמוד השני |
-| `docs/data_dictionary.md` | תיעוד שדות, כיסוי ומגבלות |
+| `data/processed/esa_discos_failed_launches_since_2000.csv` | Analysis-ready table of 119 launch failures, sorted newest to oldest |
+| `data/raw/esa_discos/` | Original ESA DISCOS API responses, retained for reproducibility |
+| `docs/data_dictionary.md` | Field definitions, coverage and limitations |
 
-## משתנים זמינים כעת
+## 🧾 Available Now
 
-ברמת האירוע: מזהה DISCOS, `epoch`, מספר טיסה, COSPAR Launch Number ודגל `failure`.
+- Launch date, flight number, COSPAR number and failure flag
+- Vehicle and launch-site details for all 119 events
+- Linked organisations or countries for 44 events
+- Raw API data and a processed CSV table
 
-ברמת כלי השיגור: שם, מסה, ממדים, מספר שלבים, דחף, קיבולות מסלוליות וסטטיסטיקת שיגורים מוצלחים/כושלים.
+## ➡️ Next Step
 
-ברמת אתר השיגור: שם, קווי רוחב/אורך, גובה, pads, azimuths ומגבלות.
+Build an `event_master` that connects each failure to affected companies, tickers, returns, implied volatility and validated event sources.
 
-ברמת הישות: שם של מדינה או ארגון, ובארגונים גם טווח תאריכים.
+## 📚 Source
 
-## מגבלות חשובות
-
-המדגם הנוכחי אינו כולל סיבת כשל, דרגת חומרה, שווי מטען, ביטוח, זהות לקוח, חוזה או ticker. בנוסף, ביחסי `objects` לא נמצאו אובייקטים מקושרים באף אחת מ־119 רשומות הכשל. לכן DISCOS הוא מקור אמת טוב לבניית רשימת אירועים, אך אינו לבדו dataset פיננסי מלא.
-
-## הצעד הבא המוצע
-
-לבנות `event_master` שבו לכל כישלון מצורפים: תיאור וסיווג ידני של האירוע, חברה/חברות מושפעות, ticker, חלון אירוע, תשואות, IV, מדד שוק ומקורות מאמתים. נשמור תמיד את נתון המקור ואת השכבה המעובדת בנפרד.
-
-## ציטוט מקור
-
-בעת הפצה או שימוש במחקר נגזר יש לייחס את הנתונים ל־ESA DISCOS בהתאם לתנאי השימוש שלהם.
+ESA DISCOS (Database and Information System Characterising Objects in Space). Please retain ESA attribution when using or redistributing derived data.
