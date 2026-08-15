@@ -1,28 +1,33 @@
-# 🚀 Launch Failure Finance Research
+# Launch Failure Finance Research
 
-An event-study research dataset on the financial effects of orbital launch failures.
+Research workspace for evaluating three event-study designs that combine market returns and implied volatility (IV).
 
-`ESA DISCOS v2` `119 Failure Events` `2000–2026`
+| Track | Research design | Current status |
+| --- | --- | --- |
+| 1. Airline replication | Replicate the original aviation study and add IV | NBER DB1A/DB1B audit and quarterly summary in progress |
+| 2. Airline extension | Apply the original design to later aviation events | Design pending original-paper review and event definition |
+| 3. Space extension | Apply the design to orbital launch failures | 119 ESA DISCOS failure events since 2000 are available |
 
-## 📊 Current Dataset
+## Repository Map
 
-| File | Description |
-| --- | --- |
-| `data/processed/esa_discos_failed_launches_since_2000.csv` | Analysis-ready table of 119 launch failures, sorted newest to oldest |
-| `data/raw/esa_discos/` | Original ESA DISCOS API responses, retained for reproducibility |
-| `docs/data_dictionary.md` | Field definitions, coverage and limitations |
+```text
+data/
+  airline/       NBER-derived summaries; source archive remains outside Git
+  space/         ESA DISCOS raw responses and processed failure-event table
+docs/
+  00_decision_memo.md
+  tracks/        One brief for each research path
+scripts/         Reproducible data-processing code
+```
 
-## 🧾 Available Now
+## Available Data
 
-- Launch date, flight number, COSPAR number and failure flag
-- Vehicle and launch-site details for all 119 events
-- Linked organisations or countries for 44 events
-- Raw API data and a processed CSV table
+- `data/space/processed/esa_discos_failed_launches_since_2000.csv`: 119 launch failures from 2000 onward.
+- `data/space/raw/esa_discos/`: preserved ESA DISCOS API responses.
+- `data/airline/processed/`: quarterly NBER DB1A summaries generated locally from the 151-file archive.
 
-## ➡️ Next Step
+## Not Yet Acquired
 
-Build an `event_master` that connects each failure to affected companies, tickers, returns, implied volatility and validated event sources.
+The repository does not yet contain equity returns, benchmark returns, option implied volatility, company/ticker mappings, PCTLAP, ContractOverlap or contract-level USAspending extracts. These are the next research inputs, not assumed available.
 
-## 📚 Source
-
-ESA DISCOS (Database and Information System Characterising Objects in Space). Please retain ESA attribution when using or redistributing derived data.
+See [the decision memo](docs/00_decision_memo.md) for scope, data requirements and next steps.

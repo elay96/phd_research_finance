@@ -2,7 +2,7 @@
 
 ## טבלת האירועים הראשונית
 
-קובץ: `data/processed/esa_discos_failed_launches_since_2000.csv`
+קובץ: `data/space/processed/esa_discos_failed_launches_since_2000.csv`
 
 | שדה | משמעות |
 | --- | --- |
