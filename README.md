@@ -1,33 +1,44 @@
-# Launch Failure Finance Research
+<div align="center">
 
-Research workspace for evaluating three event-study designs that combine market returns and implied volatility (IV).
+# 🚀 Launch Failure Finance Research
 
-| Track | Research design | Current status |
-| --- | --- | --- |
-| 1. Airline replication | Replicate the original aviation study and add IV | NBER DB1A/DB1B audit and quarterly summary in progress |
-| 2. Airline extension | Apply the original design to later aviation events | Design pending original-paper review and event definition |
-| 3. Space extension | Apply the design to orbital launch failures | 119 ESA DISCOS failure events since 2000 are available |
+### Event-study research on failure events, equity returns and implied volatility
 
-## Repository Map
+`Aviation replication` &nbsp;•&nbsp; `Aviation extension` &nbsp;•&nbsp; `Space launch failures`
+
+</div>
+
+---
+
+## Research Paths
+
+| | Research path | What is available now | Next requirement |
+| :---: | --- | --- | --- |
+| ✈️ | **Airline replication + IV** | NBER DB1A quarterly summaries, 1979Q1–2016Q3 | Original-paper data/code and PCTLAP reconstruction |
+| 📈 | **Later aviation events** | Replication framework and NBER audit | Post-2016 airline data, event definition, returns and IV |
+| 🛰️ | **Space launch failures** | 119 ESA DISCOS failure events since 2000 | Company/ticker mapping, returns, IV and contract exposure |
+
+> **Current decision:** evaluate the exact reproducibility of the aviation overlap measure while building a small validated space-event pilot.
+
+## Data at a Glance
 
 ```text
 data/
-  airline/       NBER-derived summaries; source archive remains outside Git
-  space/         ESA DISCOS raw responses and processed failure-event table
-docs/
-  00_decision_memo.md
-  tracks/        One brief for each research path
-scripts/         Reproducible data-processing code
+├── airline/    NBER-derived quarterly summary — 151 archives processed
+└── space/      ESA DISCOS raw API responses + 119-event research table
 ```
 
-## Available Data
+| Dataset | Use | Key limitation |
+| --- | --- | --- |
+| [NBER DB1A summary](data/airline/processed/nber_db1a_quarterly_summary.csv) | Airline routes, carriers, fares and passengers | Archive ends in 2016Q3; PCTLAP is not a ready-made variable |
+| [ESA DISCOS event table](data/space/processed/esa_discos_failed_launches_since_2000.csv) | Launch-failure event universe | Does not identify affected listed firms or market outcomes |
 
-- `data/space/processed/esa_discos_failed_launches_since_2000.csv`: 119 launch failures from 2000 onward.
-- `data/space/raw/esa_discos/`: preserved ESA DISCOS API responses.
-- `data/airline/processed/`: quarterly NBER DB1A summaries generated locally from the 151-file archive.
+## Start Here
 
-## Not Yet Acquired
+1. [Decision memo](docs/00_decision_memo.md) — comparison of the three designs.
+2. [NBER findings](docs/nber_db1a_findings.md) — processing results and data-quality caveats.
+3. [Airline replication brief](docs/tracks/01_airline_replication.md) · [later aviation brief](docs/tracks/02_airline_extension.md) · [space brief](docs/tracks/03_space_extension.md).
 
-The repository does not yet contain equity returns, benchmark returns, option implied volatility, company/ticker mappings, PCTLAP, ContractOverlap or contract-level USAspending extracts. These are the next research inputs, not assumed available.
+## Missing Research Inputs
 
-See [the decision memo](docs/00_decision_memo.md) for scope, data requirements and next steps.
+Equity returns, benchmark returns, option implied volatility, company/ticker mapping, `PCTLAP`, `ContractOverlap`, and contract-level USAspending data have **not** yet been added. This repository does not assume that these inputs are already available.

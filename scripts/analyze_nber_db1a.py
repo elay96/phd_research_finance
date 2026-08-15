@@ -102,7 +102,7 @@ def write_summary(rows: list[dict[str, object]], output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     fields = list(rows[0])
     with output.open("w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=fields)
+        writer = csv.DictWriter(file, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
