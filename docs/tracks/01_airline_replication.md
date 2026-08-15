@@ -8,6 +8,10 @@ Replicate the original aviation study using its event definition and overlap mea
 - NBER DB1A/DB1B for route, carrier, passenger and fare construction.
 - Equity returns, benchmark returns and option IV for affected carriers.
 
+## Feasibility Step: Contact an Author
+
+Contact [Vijay Singal](https://experts.vt.edu/3354-vijay-singal), one of the paper's authors, to request replication data/code or clarification of the PCTLAP construction. This may determine quickly whether an exact replication is feasible.
+
 ## Key Open Item
 
 `PCTLAP` is the critical reconstruction task. In the key paper, it is the percentage of each non-crash airline's revenue passenger miles (RPMs) that comes from routes shared with the crash airline. The authors use the quarter before the crash where possible, define a market by origin and destination, and treat itineraries with no more than one connection as substitutes. This must be rebuilt reproducibly from the ticket data; it is not an off-the-shelf NBER variable.

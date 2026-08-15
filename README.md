@@ -1,70 +1,45 @@
 <div dir="rtl">
 
-<div align="center">
+# 🚀 הצעה למחקר דוקטורט: השפעות פיננסיות של אירועי בטיחות בתעשיות התעופה והחלל
 
-# 🚀 מחקר דוקטורט: השפעות פיננסיות של אירועי בטיחות
+## 🎯 מטרת המסמך
 
-### ממאמר על התרסקויות מטוסים למחקר חדש על כשלי שיגור בחלל
+המסמך מציג שלוש חלופות מחקר סביב אותה שאלה כלכלית: כיצד אירוע בטיחותי משפיע על החברה המעורבת, על מתחרותיה ועל חברות החשופות לאותם שווקים או לקוחות.
 
-`מאמר מפתח` &nbsp;•&nbsp; `3 חלופות מחקר` &nbsp;•&nbsp; `המלצה: חלל`
-
-</div>
-
----
-
-## 🎯 ההחלטה המבוקשת
-
-**האם לאשר את חלופה 3 — מחקר event study על כשלי שיגור בחלל — כפרויקט הדוקטורט הראשי, כאשר המאמר על התרסקויות מטוסים משמש כבסיס המתודולוגי?**
-
-> **ההמלצה שלי: כן.** מסלול החלל מאפשר ליישם מנגנון כלכלי מוכר במסגרת חדשה ומקורית פוטנציאלית: לאחר כשל בטיחותי, המשקיעים עשויים לעדכן את הערכתם לגבי החברה הכושלת, מתחרותיה, וחברות התלויות באותם לקוחות או תשתיות.
+המטרה בשלב זה אינה לאשר מסלול מראש, אלא **לבצע בדיקת היתכנות ממוקדת לכל חלופה, להשוות ביניהן, ואז לבחור את מסלול הדוקטורט**.
 
 ## 📖 נקודת המוצא המתודולוגית
 
 המאמר המרכזי הוא [Bosch, Eckard & Singal (1998), *The Competitive Impact of Air Crashes: Stock Market Evidence*](literature/README.md).
 
-המאמר בוחן את תגובת מחירי המניות להתרסקויות מטוסים קטלניות. השאלה המרכזית היא האם מתחרות מרוויחות ממעבר לקוחות, או שכל הענף נפגע מ־spillover שלילי.
+המאמר בוחן את תגובת מחירי המניות להתרסקויות מטוסים קטלניות. הוא מבחין בין שני מנגנונים אפשריים: מעבר לקוחות למתחרות (switching) ופגיעה כלל־ענפית (negative spillover).
 
-המדד המרכזי במאמר, `PCTLAP`, הוא שיעור ה־RPM של חברת תעופה שאינה מעורבת בהתרסקות, שמקורו בקווים שהיא חולקת עם חברת התעופה שהתרסקה.
+המדד המרכזי, `PCTLAP`, הוא שיעור ה־RPM של חברת תעופה שאינה מעורבת בהתרסקות, שמקורו בקווים שהיא חולקת עם חברת התעופה שהתרסקה.
 
-## 🛤️ שלוש חלופות המחקר
+## 🛤️ שלוש חלופות מחקר
 
-| חלופה | שאלת המחקר | מצב הנתונים | הערכה |
-| --- | --- | --- | --- |
-| **1. שחזור תעופה + IV** | האם אפשר לשחזר את תוצאות המאמר המקורי ולהוסיף implied volatility? | נתוני NBER זמינים; חסרים נתוני/קוד הכותבים ושחזור מדויק של `PCTLAP`. | בסיס מתודולוגי חזק, אך שחזור מדויק עשוי להיות מורכב. |
-| **2. הרחבת תעופה לאירועים מאוחרים** | האם המנגנון נשמר באירועי תעופה חדשים יותר, עם תשואות ו־IV יחד? | דרושים רבעוני DB1B מאוחרים יותר, הגדרת אירועים, `PCTLAP`, תשואות ו־IV. | בר־ביצוע, אך פחות מובחן ותלוי בהשלמת נתונים אחרי 2016. |
-| **3. הרחבת המודל לכשלי שיגור בחלל** **← מומלץ** | האם כשל שיגור משפיע על תשואות ו־IV של החברה הכושלת, מתחרותיה וקבלנים קשורים? | בסיס אירועים קיים; יש להוסיף נתוני שוק ומיפוי חשיפה. | התרומה המקורית ביותר, עם מסגרת event study ברורה. |
+| Option | Research question | Advantages | Limitations | Available now | Missing / next step |
+| --- | --- | --- | --- | --- | --- |
+| **1. Original-paper replication + IV** | Can the Bosch, Eckard & Singal results be replicated and extended with implied volatility? | Direct link to an established paper; strongest identification benchmark; can validate the full research pipeline. | Exact replication may depend on unavailable author data, code, and undocumented implementation choices. | NBER DB1A ticket archive, key paper, and an initial quarterly analysis. | Contact [Vijay Singal](https://experts.vt.edu/3354-vijay-singal) for replication data/code and PCTLAP clarification; obtain returns and IV. |
+| **2. Later aviation-event extension** | Does the aviation mechanism persist for later events when returns and IV are analysed jointly? | Retains the original economic setting while producing a more current sample. | Less differentiated; requires comparable post-2016 airline data and a defensible event definition. | Historical NBER data through 2016Q3 and the original study's framework. | Download later DB1B quarters, construct the event sample and PCTLAP, and obtain returns and IV. |
+| **3. Space-launch-failure extension** | Do launch failures affect returns and IV of the failing firm, competitors, and related contractors? | Potentially original setting; a reproducible failure-event universe already exists; clear opportunity to develop a new exposure measure. | Exposure may be difficult to map because relevant firms can be private, diversified, or indirectly affected. | ESA DISCOS extract with 119 failure-flagged launches since 2000. | Build company/ticker exposure mapping, obtain returns and IV, and construct/validate `ContractOverlap`. |
 
-## ⭐ למה חלל?
+## 🧭 תהליך העבודה המוצע
 
-1. **תרומה מקורית פוטנציאלית.** המתודולוגיה מבוססת, אך ההקשר של כשלי שיגור בחלל חדש; את פער הספרות יש לאמת בסקירה שיטתית.
-2. **בסיס אירועים כבר קיים.** ESA DISCOS מספק **119 שיגורים המסומנים ככושלים מאז 2000** במדגם הנוכחי.
-3. **אפשר לבנות מדד חשיפה מקביל.** `ContractOverlap` ימדוד עד כמה שתי חברות תלויות באותם לקוחות ממשלתיים ובאותם סוגי פרויקטים. USAspending הוא מקור אפשרי לחוזים פדרליים בארה״ב.
-4. **אפשר לבחון תשואות ו־IV יחד.** בכפוף לגישה למאגר הפיננסי של הקבוצה, אפשר למדוד תשואות מניה, תשואות חריגות, implied volatility ונפח מסחר סביב האירוע.
+כדי שלא להשאיר אף חלופה ללא המשך ברור, יבוצעו שלושה צעדי היתכנות קצרים במקביל:
 
-## 📦 מה כבר יש ומה חסר
+1. **חלופה 1 — בירור שחזור מדויק:** לפנות ל־[Vijay Singal](https://experts.vt.edu/3354-vijay-singal), אחד מכותבי המאמר, בבקשה לנתונים, קוד או הבהרה לגבי `PCTLAP`.
+2. **חלופה 2 — בדיקת כיסוי עדכני:** להשלים ידנית רבעוני DB1B מ־2016Q4 ועד היום, ולהגדיר רשימת אירועי תעופה מאוחרים.
+3. **חלופה 3 — פיילוט חלל:** לבנות `event_master` קטן ומאומת לכמה כשלי שיגור, כולל חומרת האירוע, חברות חשופות, tickers ומקורות.
+4. **החלטת מסלול:** להשוות את שלוש החלופות לפי זמינות נתונים, היתכנות מדד החשיפה, כיסוי returns/IV, תרומה מקורית וסיכוני זיהוי.
 
-| רכיב | סטטוס | מקור / פעולה נדרשת |
-| --- | --- | --- |
-| 🛰️ אירועי כשל שיגור | זמין | ESA DISCOS: [טבלת 119 האירועים](data/space/processed/esa_discos_failed_launches_since_2000.csv) |
-| ✈️ Benchmark תעופתי | זמין | מאמר המפתח וארכיון NBER DB1A; מיועד לשחזור ולפיילוט של מדד החפיפה |
-| 📈 תשואות מניה ומדדי ייחוס | נדרש | שימוש במאגר המוסדי של הקבוצה, אם הגישה זמינה |
-| 📉 implied volatility | נדרש | אותו מקור מוסדי או מודול options, בכפוף לכיסוי |
-| 🏢 חברות, tickers וסיווג חשיפה | לבנייה | זיהוי ספקי שיגור, חברות לוויין, קבלנים וספקים ציבוריים חשופים |
-| 🤝 `ContractOverlap` | לבנייה ולאימות | חפיפת לקוחות וסוגי פרויקטים מתוך נתוני חוזים |
+## 📦 חומרי עבודה שכבר קיימים
 
-## ✅ מה נעשה אם המסלול יאושר
-
-1. נבנה `event_master` לפיילוט של כשלי שיגור: תאריך, חומרה, חברות מעורבות, ticker ומקורות מאמתים.
-2. נוודא את הכיסוי של תשואות יומיות ו־IV במאגר הנתונים של הקבוצה.
-3. נגדיר ונבחן את `ContractOverlap` במדגם הפיילוט.
-4. נריץ event study לתשואות ול־IV, ונשתמש במאמר התעופה כ־benchmark לבחירות המפרט וה־robustness checks.
-
-## 📚 חומרי עזר
-
-- [מזכר ההחלטה](docs/00_decision_memo.md)
 - [מאמר המפתח וה־PDF](literature/README.md)
 - [ניתוח נתוני NBER DB1A/DB1B](docs/nber_db1a_findings.md)
-- [מסלול שחזור התעופה](docs/tracks/01_airline_replication.md)
-- [מסלול החלל](docs/tracks/03_space_extension.md)
+- [טבלת 119 כשלי השיגור מ־ESA DISCOS](data/space/processed/esa_discos_failed_launches_since_2000.csv)
+- [מזכר ההחלטה](docs/00_decision_memo.md)
+- [מסמך שחזור המאמר המקורי](docs/tracks/01_airline_replication.md)
+- [מסמך הרחבת החלל](docs/tracks/03_space_extension.md)
 
 </div>
