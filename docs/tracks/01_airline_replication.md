@@ -1,4 +1,4 @@
-# Track 1 — Airline Replication with Implied Volatility
+# Track 1 - Airline Replication with Implied Volatility
 
 Replicate the original aviation study using its event definition and overlap measure, then add an IV response around each event.
 

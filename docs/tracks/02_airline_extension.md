@@ -1,4 +1,4 @@
-# Track 2 — Later Aviation Events
+# Track 2 - Later Aviation Events
 
 Reuse the original aviation-study structure for events outside the original sample period, with returns and IV estimated jointly.
 

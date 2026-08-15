@@ -1,4 +1,4 @@
-# Source Assessment — NBER DB1A / DB1B Airline Ticket Data
+# Source Assessment - NBER DB1A / DB1B Airline Ticket Data
 
 ## Decision
 
@@ -20,7 +20,7 @@ The inspected DB1A dictionary contains airport fields (`apt1`–`apt3`), carrier
 
 DB1B is a quarterly 10% sample of airline tickets from reporting carriers. Its ticket, market and coupon tables are designed for analysis of passenger itineraries, fares, routes, miles and carrier market shares.
 
-It would be relevant only if the project were expanded to an **aviation passenger-market** event study—for example, estimating how airline accidents or route disruptions affect fares or passenger demand. That is a different identification setting from the present launch-failure finance study.
+It would be relevant only if the project were expanded to an **aviation passenger-market** event study-for example, estimating how airline accidents or route disruptions affect fares or passenger demand. That is a different identification setting from the present launch-failure finance study.
 
 ## Recommended data for the current project
 

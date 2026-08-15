@@ -1,6 +1,10 @@
 <div dir="rtl">
 
+<div align="center">
+
 # 🚀 הצעה למחקר דוקטורט: השפעות פיננסיות של אירועי בטיחות בתעשיות התעופה והחלל
+
+</div>
 
 ## 🎯 מטרת המסמך
 
@@ -18,20 +22,30 @@
 
 ## 🛤️ שלוש חלופות מחקר
 
-| Option | Research question | Advantages | Limitations | Available now | Missing / next step |
-| --- | --- | --- | --- | --- | --- |
-| **1. Original-paper replication + IV** | Can the Bosch, Eckard & Singal results be replicated and extended with implied volatility? | Direct link to an established paper; strongest identification benchmark; can validate the full research pipeline. | Exact replication may depend on unavailable author data, code, and undocumented implementation choices. | NBER DB1A ticket archive, key paper, and an initial quarterly analysis. | Contact [Vijay Singal](https://experts.vt.edu/3354-vijay-singal) for replication data/code and PCTLAP clarification; obtain returns and IV. |
-| **2. Later aviation-event extension** | Does the aviation mechanism persist for later events when returns and IV are analysed jointly? | Retains the original economic setting while producing a more current sample. | Less differentiated; requires comparable post-2016 airline data and a defensible event definition. | Historical NBER data through 2016Q3 and the original study's framework. | Download later DB1B quarters, construct the event sample and PCTLAP, and obtain returns and IV. |
-| **3. Space-launch-failure extension** | Do launch failures affect returns and IV of the failing firm, competitors, and related contractors? | Potentially original setting; a reproducible failure-event universe already exists; clear opportunity to develop a new exposure measure. | Exposure may be difficult to map because relevant firms can be private, diversified, or indirectly affected. | ESA DISCOS extract with 119 failure-flagged launches since 2000. | Build company/ticker exposure mapping, obtain returns and IV, and construct/validate `ContractOverlap`. |
+<div dir="ltr">
+
+| Option | Focus | Pros | Cons | Current position |
+| --- | --- | --- | --- | --- |
+| **1. Original-paper replication + IV** | Replicate the original result and add IV. | Clear benchmark and direct link to the paper. | May depend on author data and exact PCTLAP implementation. | NBER archive and key paper are available. Contact [Vijay Singal](https://experts.vt.edu/3354-vijay-singal). |
+| **2. Later aviation-event extension** | Test later air-crash events. | Same economic setting with a newer sample. | Needs post-2016 data and an event definition. | Historical NBER data are available through 2016Q3. |
+| **3. Space-launch-failure extension** | Test launch failures, competitors and contractors. | Potentially original setting; event universe already exists. | Exposure mapping may be difficult. | ESA DISCOS has 119 failure-flagged launches since 2000. |
+
+</div>
 
 ## 🧭 תהליך העבודה המוצע
 
-כדי שלא להשאיר אף חלופה ללא המשך ברור, יבוצעו שלושה צעדי היתכנות קצרים במקביל:
+1. **חלופה 1: שחזור המחקר המקורי והוספת נתוני IV.**
+   - לפנות ל־[Vijay Singal](https://experts.vt.edu/3354-vijay-singal), אחד מכותבי המאמר, בבקשה לנתונים המקוריים, לקוד, או להסבר על בניית `PCTLAP`.
+   - לשחזר את נתוני התעופה מתוך [NBER DB1A/DB1B](https://www.nber.org/research/data/department-transportation-db1adb1b) ולהוסיף תשואות מניה ו־IV. האתגר המרכזי הוא שחזור חפיפת המסלולים, `PCTLAP`.
 
-1. **חלופה 1 — בירור שחזור מדויק:** לפנות ל־[Vijay Singal](https://experts.vt.edu/3354-vijay-singal), אחד מכותבי המאמר, בבקשה לנתונים, קוד או הבהרה לגבי `PCTLAP`.
-2. **חלופה 2 — בדיקת כיסוי עדכני:** להשלים ידנית רבעוני DB1B מ־2016Q4 ועד היום, ולהגדיר רשימת אירועי תעופה מאוחרים.
-3. **חלופה 3 — פיילוט חלל:** לבנות `event_master` קטן ומאומת לכמה כשלי שיגור, כולל חומרת האירוע, חברות חשופות, tickers ומקורות.
-4. **החלטת מסלול:** להשוות את שלוש החלופות לפי זמינות נתונים, היתכנות מדד החשיפה, כיסוי returns/IV, תרומה מקורית וסיכוני זיהוי.
+2. **חלופה 2: מחקר תעופה חדש על אירועים מאוחרים יותר.**
+   - לקחת את מבנה המחקר המקורי ולבנות מדגם של אירועי תעופה מאוחרים יותר.
+   - לנתח תשואות ו־IV יחד, לאחר השלמת נתוני DB1B מאז 2016Q4 והגדרה עקבית של מדד החפיפה.
+
+3. **חלופה 3: מחקר חדש על כשלי שיגור בחלל.**
+   - להשתמש ב־ESA DISCOS כבסיס לאירועי שיגור וכשל. ב־extract הנוכחי יש 119 שיגורים המסומנים ככושלים מאז 2000.
+   - במקום לשחזר את `PCTLAP`, לבנות `ContractOverlap`: עד כמה חוזים של חברה i מגיעים מאותם לקוחות ממשלתיים ומאותם סוגי פרויקטים כמו חברה j.
+   - להשתמש ב־[USAspending](https://www.usaspending.gov/) כמקור ממשלתי פתוח לנתוני חוזים פדרליים בארה״ב.
 
 ## 📦 חומרי עבודה שכבר קיימים
 

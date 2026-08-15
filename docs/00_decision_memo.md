@@ -18,7 +18,7 @@ Evaluate whether failure events affect the market value and implied volatility o
 
 ## Recommended Sequencing
 
-1. Obtain the original paper, replication code and—if possible—author data.
+1. Obtain the original paper, replication code and-if possible-author data.
 2. Use the NBER summary and one or two pilot quarters to establish whether PCTLAP can be reconstructed.
 3. In parallel, build a small, manually validated space `event_master` for listed, plausibly exposed firms.
 4. Select the track after evaluating coverage of listed firms and IV availability.

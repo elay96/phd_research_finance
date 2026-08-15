@@ -1,4 +1,4 @@
-# NBER DB1A / DB1B — Initial Findings
+# NBER DB1A / DB1B - Initial Findings
 
 ## Processing Result
 

@@ -1,4 +1,4 @@
-# Data Dictionary — ESA DISCOS Launch Failures
+# Data Dictionary - ESA DISCOS Launch Failures
 
 ## טבלת האירועים הראשונית
 

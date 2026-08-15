@@ -1,4 +1,4 @@
-# Track 3 — Space Launch Failures
+# Track 3 - Space Launch Failures
 
 Apply the event-study framework to orbital launch failures.
 
